@@ -6,7 +6,7 @@ subtitle: Master of Computer Science student at <a href='https://cs.duke.edu/'>D
 
 profile:
   align: right
-  # image: prof_pic.jpg # add your photo to assets/img/ and uncomment this line
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Department of Computer Science</p>
