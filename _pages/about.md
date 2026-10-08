@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Master of Computer Science student at <a href='https://cs.duke.edu/'>Duke University</a>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  # image: prof_pic.jpg # add your photo to assets/img/ and uncomment this line
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Department of Computer Science</p>
+    <p>Duke University</p>
+    <p>Durham, NC</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -22,13 +22,13 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm a Master of Computer Science student at Duke University (AI/ML concentration), advised by [Prof. Bhuwan Dhingra](https://users.cs.duke.edu/~bdhingra/) and [Prof. Jun Yang](https://users.cs.duke.edu/~junyang/). My research focuses on **improving how LLM agents strategically plan, reason, and adapt to users' preferences**.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+At Duke, I work with DukeNLP on understanding how search agents gather and organize evidence ([SearchAtlas](https://arxiv.org/abs/2609.10901), EMNLP 2026), and with Prof. Monica Agrawal on benchmarking LLM agents for multifactorial distribution shift. I'm also part of the [Polarization Lab](https://www.polarizationlab.com/), where I build social agent simulations that generate bridging comments to encourage cross-perspective, civil discussion online.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Before Duke, I earned my B.Sc. in Computer Science (AI focus) from the University of Toronto, and was a research intern at the Vector Institute, where I built a trustworthy mental-health conversational agent for immigrant youth.
+
+_Papers are published under my legal name, Mengyuan Li._
