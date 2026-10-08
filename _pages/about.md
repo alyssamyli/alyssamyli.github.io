@@ -25,10 +25,8 @@ latest_posts:
   enabled: false
 ---
 
-I'm a Master of Computer Science student at Duke University (AI/ML concentration), advised by [Prof. Bhuwan Dhingra](https://users.cs.duke.edu/~bdhingra/) and [Prof. Jun Yang](https://users.cs.duke.edu/~junyang/). My research focuses on **improving how LLM agents strategically plan, reason, and adapt to users' preferences**.
+I'm a second-year Master of Computer Science student at Duke University, concentrating in AI/ML. My research focuses on **improving how LLM agents strategically plan, reason, and adapt to users' preferences**. At Duke, I'm fortunate to work with Prof. Bhuwan Dhingra, Prof. Monica Agrawal, and Prof. Jun Yang.
 
-At Duke, I work with DukeNLP on understanding how search agents gather and organize evidence ([SearchAtlas](https://arxiv.org/abs/2609.10901), EMNLP 2026), and with Prof. Monica Agrawal on benchmarking LLM agents for multifactorial distribution shift. I'm also part of the [Polarization Lab](https://www.polarizationlab.com/), where I build social agent simulations that generate bridging comments to encourage cross-perspective, civil discussion online.
-
-Before Duke, I earned my B.Sc. in Computer Science (AI focus) from the University of Toronto, and was a research intern at the Vector Institute, where I built a trustworthy mental-health conversational agent for immigrant youth.
+Before Duke, I earned my B.Sc. from the University of Toronto, St. George campus, as a Computer Science Specialist with a focus in AI. There, I worked closely with Prof. Mark Chignell and Prof. Amy Finn. I was also a research intern affiliated with the Vector Institute, where I built a trustworthy mental-health conversational agent for immigrant youth.
 
 _Papers are published under my legal name, Mengyuan Li._
