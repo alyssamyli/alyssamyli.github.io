@@ -29,4 +29,6 @@ I'm a second-year Master of Computer Science student at Duke University, concent
 
 Before Duke, I earned my B.Sc. from the University of Toronto, St. George campus, as a Computer Science Specialist with a focus in AI. There, I worked closely with Prof. Mark Chignell and Prof. Amy Finn. I was also a research intern affiliated with the Vector Institute, where I built a trustworthy mental-health conversational agent for immigrant youth.
 
+⭐ I'm actively looking for research collaborators. If you're working on **human–AI collaboration** or **planning and reasoning in LLM agents**, I'd love to hear from you, so please [reach out](mailto:ml790@duke.edu)! ⭐
+
 _Papers are published under my legal name, Mengyuan Li._
