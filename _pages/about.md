@@ -2,7 +2,6 @@
 layout: about
 title: about
 permalink: /
-subtitle: Master of Computer Science student at <a href='https://cs.duke.edu/'>Duke University</a>
 
 profile:
   align: right
