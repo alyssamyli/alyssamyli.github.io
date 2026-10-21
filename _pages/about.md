@@ -25,9 +25,9 @@ latest_posts:
   enabled: false
 ---
 
-I'm a second-year Master of Computer Science student at Duke University, concentrating in AI/ML. My research focuses on **improving how LLM agents strategically plan, reason, and adapt to users' preferences**. At Duke, I'm fortunate to work with Prof. Bhuwan Dhingra, Prof. Monica Agrawal, and Prof. Jun Yang.
+I'm a second-year Master of Computer Science student at Duke University. My research goal is to **build AI agents that make life better for people and for society**. To do that, agents need to (1) be robust and accurate at the tasks we rely on them for ([SearchAtlas](https://arxiv.org/abs/2609.10901), MultivarBench); (2) understand the people and communities they serve (Bridging); and (3) learn and adapt to individual preferences as they interact with us.
 
-Before Duke, I earned my B.Sc. from the University of Toronto, St. George campus, as a Computer Science Specialist with a focus in AI. There, I worked closely with Prof. Mark Chignell and Prof. Amy Finn. I was also a research intern affiliated with the Vector Institute, where I built a trustworthy mental-health conversational agent for immigrant youth.
+At Duke, I'm fortunate to work with Prof. Bhuwan Dhingra, Prof. Monica Agrawal, and Prof. Jun Yang. Before Duke, I earned my B.Sc. from the University of Toronto, as a Computer Science Specialist with a focus in AI. There, I worked closely with Prof. Mark Chignell and Prof. Amy Finn.
 
 ⭐ I'm actively looking for research collaborators. If you're working on **human–AI collaboration** or **planning and reasoning in LLM agents**, I'd love to hear from you, so please [reach out](mailto:ml790@duke.edu)! ⭐
 
