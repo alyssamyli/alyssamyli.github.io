@@ -31,3 +31,6 @@ At Duke, I'm fortunate to work with Prof. Bhuwan Dhingra, Prof. Monica Agrawal, 
 ⭐ I'm actively looking for research collaborators. If you're working on **human–AI collaboration** or **planning and reasoning in LLM agents**, I'd love to hear from you, so please [reach out](mailto:ml790@duke.edu)! ⭐
 
 _Papers are published under my legal name, Mengyuan Li._
+
+<div id="visitor-map" data-endpoint="{{ site.visitor_map.endpoint }}" data-home-lat="{{ site.visitor_map.home_lat }}" data-home-lon="{{ site.visitor_map.home_lon }}" data-home-label="{{ site.visitor_map.home_label }}"></div>
+<script defer src="{{ '/assets/js/visitor-map.js' | relative_url | bust_file_cache }}"></script>

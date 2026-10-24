@@ -24,6 +24,14 @@ last_updated: false # set to true if you want to display last updated in the foo
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
 
+# Visitor map on the About page (black/gold world map of visitor cities).
+# The endpoint is the Cloudflare Worker in visitor-map-worker/. Leave it blank to hide the map.
+visitor_map:
+  endpoint: https://visitor-map.alyssamengyuanli.workers.dev
+  home_lat: 35.99
+  home_lon: -78.94
+  home_label: Durham
+
 # -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
@@ -221,6 +229,7 @@ kramdown:
 include: ["_pages"]
 exclude:
   - AGENTS.md
+  - visitor-map-worker/
   - al-folio-upgrade-report.md
   - bin/
   - CLAUDE.md
