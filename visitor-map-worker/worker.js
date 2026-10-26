@@ -9,8 +9,9 @@
 //
 // For the site owner only, stats.detail also keeps per network + place counts:
 // { network name (e.g. a university or ISP), city, region, postal code, country,
-//   visits, first/last visit date }. It is never returned by /data; read it from
-// the KV namespace in the Cloudflare dashboard.
+//   visits, first/last visit date }, and stats.recent keeps the latest visits
+// (time to the minute, UTC) with the same fields. Neither is ever returned by
+// /data; read them from the KV namespace in the Cloudflare dashboard.
 //
 // Setup: bind a KV namespace to this Worker under the variable name VISITS.
 
@@ -18,6 +19,7 @@ const ALLOWED_ORIGINS = new Set(["https://alyssamyli.github.io"]);
 const STATS_KEY = "stats";
 const MAX_PLACES = 2000;
 const MAX_DETAIL = 3000;
+const MAX_RECENT = 500;
 const BOT_UA = /bot|crawl|spider|slurp|headless|preview|scan|monitor|lighthouse/i;
 
 export default {
@@ -67,6 +69,7 @@ export function record(stats, cf) {
 
 function recordDetail(stats, cf) {
   if (!stats.detail) stats.detail = {};
+  if (!Array.isArray(stats.recent)) stats.recent = [];
   const clip = (v, n) => String(v || "").slice(0, n);
   const row = {
     network: clip(cf.asOrganization, 120),
@@ -75,8 +78,12 @@ function recordDetail(stats, cf) {
     postal: clip(cf.postalCode, 16),
     country: clip(cf.country, 2),
   };
+  const now = new Date().toISOString();
+  stats.recent.unshift({ t: now.slice(0, 16) + "Z", ...row });
+  if (stats.recent.length > MAX_RECENT) stats.recent.length = MAX_RECENT;
+
   const key = [row.network, row.city, row.region, row.postal, row.country].join("|");
-  const today = new Date().toISOString().slice(0, 10);
+  const today = now.slice(0, 10);
   let d = stats.detail[key];
   if (!d) {
     if (Object.keys(stats.detail).length >= MAX_DETAIL) return;
