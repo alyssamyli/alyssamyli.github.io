@@ -7,11 +7,17 @@
 // No IP addresses, user agents or other personal data are stored, only
 // { city, country, approximate lat/lon, visit count } per place.
 //
+// For the site owner only, stats.detail also keeps per network + place counts:
+// { network name (e.g. a university or ISP), city, region, postal code, country,
+//   visits, first/last visit date }. It is never returned by /data; read it from
+// the KV namespace in the Cloudflare dashboard.
+//
 // Setup: bind a KV namespace to this Worker under the variable name VISITS.
 
 const ALLOWED_ORIGINS = new Set(["https://alyssamyli.github.io"]);
 const STATS_KEY = "stats";
 const MAX_PLACES = 2000;
+const MAX_DETAIL = 3000;
 const BOT_UA = /bot|crawl|spider|slurp|headless|preview|scan|monitor|lighthouse/i;
 
 export default {
@@ -44,6 +50,7 @@ export default {
 
 export function record(stats, cf) {
   stats.total += 1;
+  recordDetail(stats, cf);
   const lat = Number.parseFloat(cf.latitude);
   const lon = Number.parseFloat(cf.longitude);
   if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
@@ -56,6 +63,27 @@ export function record(stats, cf) {
     place = stats.places[key] = { city, country, lat: round2(lat), lon: round2(lon), n: 0 };
   }
   place.n += 1;
+}
+
+function recordDetail(stats, cf) {
+  if (!stats.detail) stats.detail = {};
+  const clip = (v, n) => String(v || "").slice(0, n);
+  const row = {
+    network: clip(cf.asOrganization, 120),
+    city: clip(cf.city, 80),
+    region: clip(cf.region, 80),
+    postal: clip(cf.postalCode, 16),
+    country: clip(cf.country, 2),
+  };
+  const key = [row.network, row.city, row.region, row.postal, row.country].join("|");
+  const today = new Date().toISOString().slice(0, 10);
+  let d = stats.detail[key];
+  if (!d) {
+    if (Object.keys(stats.detail).length >= MAX_DETAIL) return;
+    d = stats.detail[key] = { ...row, n: 0, first: today };
+  }
+  d.n += 1;
+  d.last = today;
 }
 
 async function load(env) {
